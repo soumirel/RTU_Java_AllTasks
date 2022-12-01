@@ -1,9 +1,11 @@
 package rtu.task17;
 
 public interface Item {
-    void getName();
+    public String getName();
 
-    void getCost();
+    public double getPrice();
 
-    void getDescription();
+    public String getDescription();
+
+    static final double START_PRICE = 0;
 }

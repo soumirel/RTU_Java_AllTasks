@@ -2,109 +2,81 @@ package rtu.task11;
 
 public class Main {
     public static void main(String[] args) {
-        testArrayQueueADT();
-        testArrayQueueModule();
         testArrayQueue();
-    }
-
-    public static void testArrayQueueADT() {
-
-        System.out.println("TestArrayQueueADT");
-        ArrayQueueADT queue = new ArrayQueueADT();
-
-        for (int i = 0; i < 10; i++) {
-            ArrayQueueADT.enqueue(queue, i);
-        }
-        printArrayQueueADT(queue);
-        System.out.println("-------");
-        while (!ArrayQueueADT.isEmpty(queue)) {
-            System.out.println(
-                    ArrayQueueADT.size(queue) + " " + ArrayQueueADT.element(queue) + " " + ArrayQueueADT.dequeue(queue));
-        }
-        System.out.println("isEmpty: " + ArrayQueueADT.isEmpty(queue));
-        System.out.println("-------");
-        for (int i = 0; i < 10; i++) {
-            ArrayQueueADT.enqueue(queue, i);
-        }
-        printArrayQueueADT(queue);
-        System.out.println("-------");
-        ArrayQueueADT.clear(queue);
-        System.out.println("isEmpty: " + ArrayQueueADT.isEmpty(queue));
-        System.out.println("-------");
-    }
-
-    public static void printArrayQueueADT(ArrayQueueADT queue) {
-        Object[] arr = ArrayQueueADT.toArray(queue);
-        for (Object o : arr) {
-            System.out.print(o + " ");
-        }
         System.out.println();
-    }
-
-    public static void printArrayQueue(ArrayQueue queue) {
-        Object[] arr = queue.toArray();
-        for (Object o : arr) {
-            System.out.print(o + " ");
-        }
+        testArrayQueueADT();
         System.out.println();
+        testArrayQueueModule();
     }
 
-    public static void printArrayQueueModule(ArrayQueueModule queue) {
-        Object[] arr = queue.toArray();
-        for (Object o : arr) {
-            System.out.print(o + " ");
-        }
-        System.out.println();
-    }
-
-
-    public static void testArrayQueue() {
-        System.out.println("TestArrayQueue");
+    public static void testArrayQueue(){
+        System.out.println("Тест ArrayQueue");
         ArrayQueue queue = new ArrayQueue();
-
-        for (int i = 0; i < 10; i++) {
+        System.out.println("Заполнение");
+        for (int i = 0; i < 5; i++) {
             queue.enqueue(i);
         }
-        printArrayQueue(queue);
-        System.out.println("-------");
-        while (!queue.isEmpty()) {
-            System.out.println(
-                    queue.size() + " " + queue.element() + " " + queue.dequeue());
-        }
-        System.out.println("isEmpty: " + queue.isEmpty());
-        System.out.println("-------");
-        for (int i = 0; i < 10; i++) {
-            queue.enqueue(i);
-        }
-        printArrayQueue(queue);
-        System.out.println("-------");
+        System.out.println("ArrayQueue: ");
+        queue.print();
+        System.out.println();
+        System.out.println("размер = " + queue.size());
+        System.out.println("Достать первый");
+        queue.dequeue();
+        System.out.println("ArrayQueue: ");
+        queue.print();
+        System.out.println();
+        System.out.println("размер = " + queue.size());
+        System.out.println("Очистка");
         queue.clear();
-        System.out.println("isEmpty: " + queue.isEmpty());
-        System.out.println("-------");
+        System.out.println("ArrayQueue: ");
+        queue.print();
+        System.out.println("размер = " + queue.size());
     }
 
-    public static void testArrayQueueModule() {
-        System.out.println("TestArrayQueueModule");
-        ArrayQueueModule queue = new ArrayQueueModule();
+    public static void testArrayQueueADT(){
+        System.out.println("Тест ArrayQueueADT");
+        ArrayQueueADT queue = new ArrayQueueADT();
+        System.out.println("Заполнение");
+        for (int i = 0; i < 5; i++) {
+            ArrayQueueADT.enqueue(queue, i);
+        }
+        System.out.println("ArrayQueueADT: ");
+        ArrayQueueADT.print(queue);
+        System.out.println();
+        System.out.println("размер = " + ArrayQueueADT.size(queue));
+        System.out.println("Достать первый");
+        ArrayQueueADT.dequeue(queue);
+        System.out.println("ArrayQueueADT: ");
+        ArrayQueueADT.print(queue);
+        System.out.println();
+        System.out.println("размер = " + ArrayQueueADT.size(queue));
+        System.out.println("Очистка");
+        ArrayQueueADT.clear(queue);
+        System.out.println("ArrayQueueADT: ");
+        ArrayQueueADT.print(queue);
+        System.out.println("размер = " + ArrayQueueADT.size(queue));
+    }
 
-        for (int i = 0; i < 10; i++) {
-            queue.enqueue(i);
+    public static void testArrayQueueModule(){
+        System.out.println("Тест ArrayQueueModule");
+        System.out.println("Заполнение");
+        for (int i = 0; i < 5; i++) {
+            ArrayQueueModule.enqueue(i);
         }
-        printArrayQueueModule(queue);
-        System.out.println("-------");
-        while (!queue.isEmpty()) {
-            System.out.println(
-                    queue.size() + " " + queue.element() + " " + queue.dequeue());
-        }
-        System.out.println("isEmpty: " + queue.isEmpty());
-        System.out.println("-------");
-        for (int i = 0; i < 10; i++) {
-            queue.enqueue(i);
-        }
-        printArrayQueueModule(queue);
-        System.out.println("-------");
-        queue.clear();
-        System.out.println("isEmpty: " + queue.isEmpty());
-        System.out.println("-------");
+        System.out.println("ArrayQueueModule: ");
+        ArrayQueueModule.print();
+        System.out.println();
+        System.out.println("размер = " + ArrayQueueModule.size());
+        System.out.println("Достать первый");
+        ArrayQueueModule.dequeue();
+        System.out.println("ArrayQueueModule: ");
+        ArrayQueueModule.print();
+        System.out.println();
+        System.out.println("размер = " + ArrayQueueModule.size());
+        System.out.println("Очистка");
+        ArrayQueueModule.clear();
+        System.out.println("ArrayQueueModule: ");
+        ArrayQueueModule.print();
+        System.out.println("размер = " + ArrayQueueModule.size());
     }
 }

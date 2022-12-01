@@ -1,71 +1,47 @@
 package rtu.task11;
 
 public class ArrayQueue {
-    private final int START_CAPACITY = 10;
-    private Object array[];
+    private final int CAPACITY = 10;
+    private Object[] arrayQueue;
     private int size;
     private int head;
     private int tail;
 
     public ArrayQueue() {
-        array = new Object[START_CAPACITY];
+        arrayQueue = new Object[CAPACITY];
         size = head = tail = 0;
     }
 
-    private void ensureCapacity(int capacity) {
-        if (capacity >= array.length) {
-            Object[] temp = new Object[array.length << 1];
-            int count = tail < head ? array.length - head : size;
-            System.arraycopy(array, head, temp, 0, count);
+    private void checkCapacity(int capacity) {
+        if (capacity >= arrayQueue.length) {
+            Object[] temp = new Object[arrayQueue.length * 2];
+
+            int count = tail < head ? arrayQueue.length - head : size;
+            System.arraycopy(arrayQueue, head, temp, 0, count);
             if (tail < head)
-                System.arraycopy(array, 0, temp, count, tail);
-            array = temp;
+                System.arraycopy(arrayQueue, 0, temp, count, tail);
+            arrayQueue = temp;
             head = 0;
             tail = size;
         }
     }
 
     public void enqueue(Object element) {
-        assert element != null;
-        ensureCapacity(size + 1);
-        array[tail] = element;
-        tail = (tail + 1) % array.length;
+        checkCapacity(size + 1);
+        arrayQueue[tail] = element;
+        tail = (tail + 1) % arrayQueue.length;
         size++;
     }
 
     public Object element() {
-        assert size > 0;
-        return array[head];
+        return arrayQueue[head];
     }
 
     public Object dequeue() {
-        assert size > 0;
         Object result = element();
-        array[head] = null;
+        arrayQueue[head] = null;
         size--;
-        head = (head + 1) % array.length;
-        return result;
-    }
-
-    public void push(Object element) {
-        assert element != null;
-        ensureCapacity(size + 1);
-        head = (head == 0) ? array.length - 1 : head - 1;
-        array[head] = element;
-        size++;
-    }
-
-    public Object peek() {
-        assert size > 0;
-        return array[(tail == 0) ? array.length - 1 : tail - 1];
-    }
-
-    public Object remove() {
-        assert size > 0;
-        Object result = peek();
-        tail = tail == 0 ? array.length - 1 : --tail;
-        array[tail] = null;
-        size--;
+        head = (head + 1) % arrayQueue.length;
         return result;
     }
 
@@ -79,15 +55,16 @@ public class ArrayQueue {
 
     public void clear() {
         size = head = tail = 0;
-        array = new Object[START_CAPACITY];
+        arrayQueue = new Object[CAPACITY];
     }
 
-    public Object[] toArray() {
-        Object[] temp = new Object[size];
-        int count = tail < head ? array.length - head : size;
-        System.arraycopy(array, head, temp, 0, count);
-        if (tail < head)
-            System.arraycopy(array, 0, temp, count, tail);
-        return temp;
+    public  void print(){
+        if(isEmpty()){
+            System.out.println("Empty");
+            return;
+        }
+        for(int i = head; i<head+size; i++) {
+            System.out.print(arrayQueue[i] + " ");
+        }
     }
 }

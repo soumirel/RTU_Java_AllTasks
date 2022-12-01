@@ -1,32 +1,22 @@
 package rtu.task17;
 
-public interface Order {
+public interface Order
+{
+    public boolean add(Item item);
 
-    boolean add(Item item);
+    public boolean remove(Item item);
 
-    String[] itemsNames();
+    public int removeAll(String name);
 
-    int itemsQuantity();
+    public int getItemQuantity();
 
-    int itemQuantity(String itemName);
+    public int getItemQuantity(String name);
 
-    int itemQuantity(Item itemName);
+    public Item[] getItems();
 
-    Item[] getItems();
+    public double getPrice();
 
-    boolean remove(String itemName);
+    public String[] getItemNames();
 
-    boolean remove(Item itemName);
-
-    int removeAll(String itemName);
-
-    int removeAll(Item itemName);
-
-    Item[] sortedItemsByCostDesc();
-
-    int costTotal();
-
-    Customer getCustomer();
-
-    void setCustomer(Customer customer);
+    public String[] getSortedItems();
 }
