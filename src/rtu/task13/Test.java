@@ -7,5 +7,11 @@ public class Test {
         System.out.println(complex);
         complex = factory.createComplex(5, 31);
         System.out.println(complex);
+        complex = factory.createComplex(0, 10);
+        System.out.println(complex);
+        complex = factory.createComplex(-7, 0);
+        System.out.println(complex);
+        complex = factory.createComplex(0, 0);
+        System.out.println(complex);
     }
 }

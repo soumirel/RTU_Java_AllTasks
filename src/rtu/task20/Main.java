@@ -9,5 +9,4 @@ public class Main {
         System.out.println(dog2);
         System.out.println(dog3);
     }
-
 }

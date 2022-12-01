@@ -14,8 +14,6 @@ public abstract class Dog {
     public void bark() {
         System.out.println("Bark! Bark!");
     }
-
-
     @Override
     public String toString() {
         return "Я " + name + ", могу " + doSomethingSpecial();

@@ -8,7 +8,7 @@ public class ChairFactory implements AbstractChairFactory{
     }
 
     @Override
-    public MagicChair createVMagicChair() {
+    public MagicChair createMagicChair() {
         return new MagicChair();
     }
 

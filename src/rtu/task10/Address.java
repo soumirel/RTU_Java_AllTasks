@@ -32,7 +32,7 @@ public class Address {
                 ", _region='" + _region + '\'' +
                 ", _city='" + _city + '\'' +
                 ", _street='" + _street + '\'' +
-                ", _house='" + _house + '\'' +
+                ",\n _house='" + _house + '\'' +
                 ", _building='" + _building + '\'' +
                 ", _apartment='" + _apartment + '\'' +
                 '}';

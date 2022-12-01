@@ -12,11 +12,11 @@ import javax.swing.JPanel;
 public class Main {
 
     public static void main(String[] args) {
-        new imageAnimation();
+        new ImageAnimation();
     }
 }
 
-class imageAnimation extends JPanel {
+class ImageAnimation extends JPanel {
 
     private JFrame frame;
     private Timer timer;
@@ -25,7 +25,7 @@ class imageAnimation extends JPanel {
     private String rawPath = "C:\\Users\\soumireL\\Pictures\\Aseprite\\flower_animation_by_shots\\flower";
     private int shotNumber = 1;
 
-    public imageAnimation() {
+    public ImageAnimation() {
         frame = new JFrame("Application name");
         frame.setSize(320, 320);
         frame.add(this);
@@ -53,5 +53,4 @@ class imageAnimation extends JPanel {
     public void paint(Graphics canvas) {
         canvas.drawImage(image, 0, 0,  null);
     }
-
 }

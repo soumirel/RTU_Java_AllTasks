@@ -2,7 +2,6 @@ package rtu.task19;
 
 public class Head {
     int rotation;
-
     Head() {
         this.rotation = 0;
     }
@@ -15,8 +14,6 @@ public class Head {
             rotation--;
         }
     }
-
-
     @Override
     public String toString() {
         if (rotation == -1) {

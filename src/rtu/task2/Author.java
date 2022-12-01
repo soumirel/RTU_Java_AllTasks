@@ -29,7 +29,7 @@ public class Author {
 
     @Override
     public String toString() {
-        return "Экземпляр класса \"Author\":" +
+        return "Экземпляр класса \"Author\":\n" +
                 "Имя: " + name + '\'' +
                 ", Emal: " + email + '\'' +
                 ", Пол: " + gender +

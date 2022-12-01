@@ -21,7 +21,7 @@ public class MobileNumber {
 
     private String parseRussianNumber(String number) {
         return new StringBuilder() + "+7" +
-                number.substring(1, 4) + "-" + number.substring(5, 7) +
+                number.substring(1, 4) + "-" + number.substring(4, 7) +
                 "-" + number.substring(7, 9) + "-" + number.substring(9, 11);
     }
 

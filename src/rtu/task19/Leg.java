@@ -1,11 +1,8 @@
 package rtu.task19;
 
 public class Leg implements Bended{
-
     private Boolean isBended;
-
     Orientation orientation;
-
     @Override
     public void bend() {
         isBended = !isBended;
@@ -15,7 +12,6 @@ public class Leg implements Bended{
         this.orientation = orientation;
         isBended = false;
     }
-
     @Override
     public String toString() {
         if (orientation == Orientation.LEFT) {

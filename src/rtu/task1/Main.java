@@ -33,6 +33,5 @@ public class Main {
 
         System.out.println("Известная информация о вашей книге:\n" + book);
         System.out.println("Примерное количество слов в книге: " + book.showTotalWords());
-        System.out.println(book.getAuthor());
     }
 }

@@ -1,25 +1,18 @@
 package rtu.task18;
 
-import rtu.task6.Student;
-
-import java.util.Random;
 import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Размер массива: ");
         int size = scanner.nextInt();
         int[] array = new int[size];
-
         for (int i = 0; i < size; i++) {
             array[i] = generateInt(-10,10);
         }
-
         printArray(array);
         Sort(array);
         printArray(array);
-
     }
 
     private static int generateInt(int left, int right) {
