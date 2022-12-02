@@ -1,10 +1,12 @@
-package rtu.task31;
+package rtu.task32_my;
 
 public interface Order
 {
     public boolean add(MenuItem menuItem);
 
     public boolean remove(MenuItem menuItem);
+
+    boolean remove(String itemName);
 
     public int removeAll(String name);
 

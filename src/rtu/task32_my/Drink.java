@@ -1,37 +1,6 @@
-package rtu.task31;
+package rtu.task32_my;
 
 import java.util.Objects;
-
-enum DrinkTypeEnum {
-    BEER("alco"),
-    WINE("alco"),
-    VODKA("alco"),
-    BRANDY("alco"),
-    CHAMPAGNE("alco"),
-    WHISKEY("alco"),
-    TEQUILA("alco"),
-    RUM("alco"),
-    VERMOUTH("alco"),
-    LIQUOR("alco"),
-    JAGERMEISTER("alco"),
-    JUICE("nonAlco"),
-    COFFEE("nonAlco"),
-    GREEN_TEA("nonAlco"),
-    BLACK_TEA("nonAlco"),
-    MILK("nonAlco"),
-    WATER("nonAlco"),
-    SODA("nonAlco");
-
-    private final String isAlco;
-
-    DrinkTypeEnum(String isAlco) {
-        this.isAlco = isAlco;
-    }
-
-    public boolean isAlco() {
-        return Objects.equals(isAlco, "alco");
-    }
-}
 
 public class Drink implements MenuItem, Alcoholable {
     private final String name;
@@ -39,6 +8,17 @@ public class Drink implements MenuItem, Alcoholable {
     private final String description;
     private final boolean isAlcoholic;
     private final double alcoholVol;
+    private final DrinkTypeEnum type;
+
+
+    public Drink(DrinkTypeEnum type, double alcoholVol, int price) {
+        this.alcoholVol = alcoholVol;
+        this.type = type;
+        this.price = price;
+        this.name = type.name();
+        this.description = "";
+        this.isAlcoholic = alcoholVol > 0;
+    }
 
     public Drink(String name, double price, String description, boolean isAlcoholic, double alcoholVol) {
         this.name = name;
@@ -46,6 +26,7 @@ public class Drink implements MenuItem, Alcoholable {
         this.description = description;
         this.isAlcoholic = isAlcoholic;
         this.alcoholVol = alcoholVol;
+        this.type = null;
     }
 
     public Drink(String name, String description, boolean isAlcoholic, double alcoholVol) {
@@ -54,6 +35,7 @@ public class Drink implements MenuItem, Alcoholable {
         this.description = description;
         this.isAlcoholic = isAlcoholic;
         this.alcoholVol = alcoholVol;
+        this.type = null;
     }
 
     public String getName() {

@@ -8,9 +8,9 @@ public interface Order
 
     public int removeAll(String name);
 
-    public int getItemQuantity();
+    public int getItemsAmount();
 
-    public int getItemQuantity(String name);
+    public int getItemsAmount(String name);
 
     public Item[] getItems();
 

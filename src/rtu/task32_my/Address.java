@@ -1,4 +1,4 @@
-package rtu.task31;
+package rtu.task32_my;
 
 import java.util.Random;
 
@@ -70,5 +70,15 @@ public class Address {
         return String.format("г.%s, К:%d, ул.%s, д.%d%c, кв.%d",
                 cityName, zipCode, streetName, buildingNumber, buildingLetter, apartmentNumber);
     }
+
+    public Address(int apartmentNumber){
+        this.apartmentNumber = apartmentNumber;
+        cityName = null;
+        zipCode = 0;
+        streetName = null;
+        buildingNumber = 0;
+        buildingLetter = ' ';
+    }
+
 }
 

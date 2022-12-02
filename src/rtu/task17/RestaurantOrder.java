@@ -39,11 +39,11 @@ public class RestaurantOrder implements Order {
         return removed;
     }
 
-    public int getItemQuantity() {
+    public int getItemsAmount() {
         return size;
     }
 
-    public int getItemQuantity(String name) {
+    public int getItemsAmount(String name) {
         int count = 0;
         for (int i = 0; i < size; i++) {
             if (items.get(i).getName().equals(name)) {

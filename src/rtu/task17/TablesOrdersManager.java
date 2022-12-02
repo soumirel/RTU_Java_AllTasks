@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class TablesOrdersManager {
-    // The map of orders, where key is table number and value is the order
     private HashMap<Integer, RestaurantOrder> orders = new HashMap<>();
 
     private int tablesAmount;
@@ -64,7 +63,7 @@ public class TablesOrdersManager {
     public int getItemsAmount(String itemName) {
         int amount = 0;
         for (RestaurantOrder order : orders.values()) {
-            amount += order.getItemQuantity(itemName);
+            amount += order.getItemsAmount(itemName);
         }
         return amount;
     }
@@ -72,7 +71,7 @@ public class TablesOrdersManager {
     public int getItemsAmount(Item item) {
         int quantity = 0;
         for (RestaurantOrder order : orders.values()) {
-            quantity += order.getItemQuantity(item.getName());
+            quantity += order.getItemsAmount(item.getName());
         }
         return quantity;
     }

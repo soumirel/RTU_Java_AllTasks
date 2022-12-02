@@ -2,8 +2,6 @@ package rtu.task17;
 
 public class Main
 {
-    /** Generates a random order.
-     */
     private static RestaurantOrder generateOrder() {
         String[][] dishes = {
                 {"Scrambled eggs", "5.5", "Beaten egg fried in a pan"},

@@ -1,4 +1,4 @@
-package rtu.task31;
+package rtu.task32_my;
 
 import java.util.Random;
 
@@ -19,7 +19,7 @@ public class Customer {
         return new Customer("Инкогнито", "Инкогнито", age, Address.EMPTY_ADDRESS());
     }
 
-    Customer(String firstName, String secondName, int age, Address address) {
+    public Customer(String firstName, String secondName, int age, Address address) {
         this.firstName = firstName;
         this.secondName = secondName;
         this.age = age;

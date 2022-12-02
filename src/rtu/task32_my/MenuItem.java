@@ -1,4 +1,4 @@
-package rtu.task31;
+package rtu.task32_my;
 
 public interface MenuItem
 {
