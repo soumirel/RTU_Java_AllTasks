@@ -1,6 +1,6 @@
-package rtu.task32_my.Frames;
+package rtu.task32.Frames;
 
-import rtu.task32_my.*;
+import rtu.task32.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -10,7 +10,6 @@ import java.awt.event.MouseEvent;
 public class NewOrderFrame extends JFrame {
     private final Order order;
     private final JLabel costLabel;
-
     private final JButton makeOrderButton;
     private DrinkPanel selectedPanel;
     private final Color defaultColor;
@@ -48,6 +47,7 @@ public class NewOrderFrame extends JFrame {
             }
         });
 
+
         DrinkTypeEnum[] drinkTypes = DrinkTypeEnum.values();
         JPanel[] panels = new JPanel[PANELS_COUNT];
         int index = 0;
@@ -57,7 +57,7 @@ public class NewOrderFrame extends JFrame {
 
             if (i < drinkTypes.length) {
                 if ((order instanceof TableOrder) || (order instanceof InternetOrder && drinkTypes[i].getAlcoholVol() == 0)) {
-                    DrinkPanel panel = new DrinkPanel(drinkTypes[i].name(), (i + 1) * 10);
+                    DrinkPanel panel = new DrinkPanel(drinkTypes[i].name(), (i + 1) * 10 / (i + 3));
                     setUpDrinkPanel(panel, drinkTypes[i]);
                     panel.run();
                     panels[index++].add(panel);
@@ -94,14 +94,10 @@ public class NewOrderFrame extends JFrame {
     }
 
     private void selectDrinkPanel(DrinkPanel panel) {
-        if (selectedPanel != null)
-            selectedPanel.setColor(defaultColor);
         selectedPanel = panel;
-        selectedPanel.setColor(Color.cyan);
     }
 
     private void deselectSelectedDrinkPanel() {
-        selectedPanel.setColor(defaultColor);
         selectedPanel = null;
         updateCostLabel();
     }

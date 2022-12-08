@@ -1,6 +1,4 @@
-package rtu.task32_my;
-
-import java.util.Objects;
+package rtu.task32;
 
 public class Drink implements MenuItem, Alcoholable {
     private final String name;
@@ -10,6 +8,16 @@ public class Drink implements MenuItem, Alcoholable {
     private final double alcoholVol;
     private final DrinkTypeEnum type;
 
+
+    public Drink() {
+        this.alcoholVol = 0;
+        this.type = null;
+        this.price = 0;
+        this.name = "";
+        this.description = "";
+        this.isAlcoholic = alcoholVol > 0;
+
+    }
 
     public Drink(DrinkTypeEnum type, double alcoholVol, int price) {
         this.alcoholVol = alcoholVol;

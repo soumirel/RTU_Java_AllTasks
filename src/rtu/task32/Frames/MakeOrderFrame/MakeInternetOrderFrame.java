@@ -1,9 +1,9 @@
-package rtu.task32_my.Frames.MakeOrderFrame;
+package rtu.task32.Frames.MakeOrderFrame;
 
-import rtu.task32_my.Address;
-import rtu.task32_my.Customer;
-import rtu.task32_my.InternetOrdersManager;
-import rtu.task32_my.Order;
+import rtu.task32.Address;
+import rtu.task32.Customer;
+import rtu.task32.InternetOrdersManager;
+import rtu.task32.Order;
 
 import javax.swing.*;
 

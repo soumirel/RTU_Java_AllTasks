@@ -1,12 +1,12 @@
-package rtu.task32_my.Frames;
+package rtu.task32.Frames;
 
 
-import rtu.task32_my.Application;
-import rtu.task32_my.Frames.MakeOrderFrame.MakeInternetOrderFrame;
-import rtu.task32_my.Frames.MakeOrderFrame.MakeOrderFrame;
-import rtu.task32_my.Frames.MakeOrderFrame.MakeTableOrderFrame;
-import rtu.task32_my.InternetOrder;
-import rtu.task32_my.Order;
+import rtu.task32.Application;
+import rtu.task32.Frames.MakeOrderFrame.MakeInternetOrderFrame;
+import rtu.task32.Frames.MakeOrderFrame.MakeOrderFrame;
+import rtu.task32.Frames.MakeOrderFrame.MakeTableOrderFrame;
+import rtu.task32.InternetOrder;
+import rtu.task32.Order;
 
 public class FrameManager {
     private static Application application;

@@ -1,4 +1,4 @@
-package rtu.task32_my;
+package rtu.task32;
 
 import javax.swing.*;
 import java.awt.*;
@@ -65,12 +65,6 @@ public class DrinkPanel extends JPanel {
     public void setDrinkCount(int drinkCount) {
         this.drinkCount = drinkCount;
         updateLabel();
-    }
-
-    public void setColor(Color color){
-        for(JPanel panel : panels){
-            panel.setBackground(color);
-        }
     }
 
     private void updateLabel(){

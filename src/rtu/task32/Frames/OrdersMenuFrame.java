@@ -1,8 +1,8 @@
-package rtu.task32_my.Frames;
+package rtu.task32.Frames;
 
-import rtu.task32_my.InternetOrder;
-import rtu.task32_my.Order;
-import rtu.task32_my.TableOrder;
+import rtu.task32.InternetOrder;
+import rtu.task32.Order;
+import rtu.task32.TableOrder;
 
 import javax.swing.*;
 import java.awt.*;
@@ -24,10 +24,10 @@ public class OrdersMenuFrame extends JFrame {
 
             for(int i = 0; i<20; i++){
                 if(i<orders.length)
-                   add(new JButton("Order №"+orderNumber++));
+                   add(new JButton("Заказ №"+orderNumber++));
                 else add(new JPanel());
             }
-            add(new JLabel("Cost: " + costSummary));
+            add(new JLabel("Суммарно: " + costSummary));
             add(new JLabel("Orders quantity: " + ordersQuantity));
         }
 

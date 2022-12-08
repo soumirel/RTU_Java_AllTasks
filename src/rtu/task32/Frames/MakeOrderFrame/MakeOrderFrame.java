@@ -1,8 +1,8 @@
-package rtu.task32_my.Frames.MakeOrderFrame;
+package rtu.task32.Frames.MakeOrderFrame;
 
 
-import rtu.task32_my.Application;
-import rtu.task32_my.Order;
+import rtu.task32.Application;
+import rtu.task32.Order;
 
 import javax.swing.*;
 

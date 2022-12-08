@@ -1,7 +1,7 @@
-package rtu.task32_my.Frames.MakeOrderFrame;
+package rtu.task32.Frames.MakeOrderFrame;
 
 
-import rtu.task32_my.*;
+import rtu.task32.*;
 
 import javax.swing.*;
 import java.util.ArrayList;
@@ -100,12 +100,6 @@ public class MakeTableOrderFrame extends MakeOrderFrame {
             JOptionPane.showMessageDialog(this, "Enter the table number correctly!");
             return false;
         }
-
-//        if(Integer.parseInt(tableNumber) >= tableOrdersManager.getOrders().length){
-//            JOptionPane.showMessageDialog(this, "There are " + tableOrdersManager.getOrders().length
-//                    + " tables: from 0 to " + (tableOrdersManager.getOrders().length - 1));
-//            return false;
-//        }
 
         ArrayList<Integer> freeTableNumbers = tableOrdersManager.freeTableNumbers();
         boolean isTableNumberFree = false;

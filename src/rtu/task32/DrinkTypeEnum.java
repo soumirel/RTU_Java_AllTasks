@@ -1,6 +1,4 @@
-package rtu.task32_my;
-
-import java.util.Objects;
+package rtu.task32;
 
 public enum DrinkTypeEnum {
     BEER(3),

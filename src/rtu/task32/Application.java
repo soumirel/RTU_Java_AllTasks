@@ -1,7 +1,7 @@
-package rtu.task32_my;
+package rtu.task32;
 
-import rtu.task32_my.Frames.FrameManager;
-import rtu.task32_my.Frames.MakeOrderFrame.MakeOrderFrame;
+import rtu.task32.Frames.FrameManager;
+import rtu.task32.Frames.MakeOrderFrame.MakeOrderFrame;
 
 
 public class Application {

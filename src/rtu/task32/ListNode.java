@@ -1,4 +1,4 @@
-package rtu.task32_my;
+package rtu.task32;
 
 public class ListNode {
     ListNode next;
